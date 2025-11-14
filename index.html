@@ -5,67 +5,74 @@
   <title>Miles Lucatorto</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
+  <!-- Favicon -->
+  <!-- Make sure ml-logo.png is in the same folder as this file -->
+  <link rel="icon" type="image/png" href="ml-logo.png" />
+
   <!-- Font -->
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet" />
 
-  <!-- Favicon -->
-  <link rel="icon" type="image/png" href="ml-logo.png" />
-
   <link rel="stylesheet" href="style.css" />
 </head>
-
-<body>
+<body id="top">
   <div class="page-wrapper">
 
-    <!-- HERO -->
-    <header class="hero section hero-banner fade-in">
-      <div class="two-column hero-layout">
+    <!-- BEGIN HERO -->
+    <header class="hero">
+      <div class="hero-inner">
+        <div class="hero-text">
+          <h1 class="hero-title">
+            <span class="hero-title-main">Miles Lucatorto</span>
+          </h1>
 
-        <!-- Left: Headshot -->
-        <div class="hero-left">
-          <div class="headshot-frame large-headshot">
-            <img src="Untitled design (11).png" alt="Miles Lucatorto headshot">
-          </div>
-        </div>
+          <!-- REPLACE: short tagline -->
+          <p class="hero-tag">
+            <span class="code-keyword">student</span> · Mechanical Engineering @ University of Connecticut
+          </p>
 
-        <!-- Right: Intro -->
-        <div class="hero-right">
-          <p class="hero-tag">Mechanical Engineering Student</p>
-
-          <h1 class="hero-name">Miles Lucatorto</h1>
-
+          <!-- REPLACE: hero intro paragraph -->
           <p class="hero-intro">
-            I like engineering work that moves from an idea to a model and then to something you can actually test. I enjoy CAD, mechanical design, hands-on building, and projects where precision and clear decisions matter.
+            I like taking ideas that sound complicated and turning them into clear models and physical builds. I enjoy CAD, prototyping, and projects where engineering decisions actually matter.
           </p>
 
-          <p class="hero-education">
-            University of Connecticut — Mechanical Engineering ’29
+          <!-- REPLACE: education line if needed -->
+          <p class="hero-education-line">
+            B.S. Mechanical Engineering · Class of 2029
           </p>
 
-          <div class="hero-actions">
-            <a class="btn primary" href="#projects-section">Jump to projects</a>
-            <a class="btn secondary" href="resume.html">View my resume</a>
+          <div class="hero-buttons">
+            <a href="projects.html" class="btn primary">View projects</a>
+            <a href="resume.html" class="btn secondary">View resume</a>
           </div>
         </div>
 
+        <div class="hero-photo">
+          <div class="hero-photo-frame">
+            <!-- REPLACE: headshot file name -->
+            <img src="Untitled design (11).png" alt="Headshot of Miles Lucatorto">
+          </div>
+        </div>
       </div>
     </header>
+    <!-- END HERO -->
 
-    <!-- ABOUT -->
-    <section class="section light-panel fade-in">
-      <div class="two-column">
+    <!-- BEGIN ABOUT -->
+    <section class="section">
+      <div class="section-inner two-column">
         <div>
           <h2>About</h2>
-          <p class="about-text">
-            I’m a Mechanical Engineering student at the University of Connecticut who’s interested in mechanical design, CAD, prototyping, and practical engineering projects. I like taking ideas from concept to clean, functional hardware. I care about clarity, simplicity, and designs that work the way they should without unnecessary complexity.
+
+          <!-- REPLACE: about paragraph -->
+          <p>
+            I am a Mechanical Engineering student at the University of Connecticut interested in design, manufacturing, and hands-on engineering. I like work that balances analysis with real builds, where the design has to fit, function, and be maintainable. I care about clear communication, clean CAD, and projects that teach something new every time.
           </p>
         </div>
 
-        <!-- CONTACT -->
         <div>
           <h3>Contact</h3>
+          <!-- REPLACE: contact values -->
+          <p>Email: Miles.lucatorto@gmail.com</p>
           <p>
-            Email: Miles.lucatorto@gmail.com<br>
             LinkedIn:
             <a href="https://www.linkedin.com/in/miles-lucatorto" target="_blank" rel="noreferrer">
               linkedin.com/in/miles-lucatorto
@@ -74,154 +81,180 @@
         </div>
       </div>
     </section>
+    <!-- END ABOUT -->
 
-    <!-- SKILLS + INVOLVEMENT -->
-    <section class="section fade-in">
-      <div class="two-column">
-
-        <!-- Skills -->
+    <!-- BEGIN SKILLS + INVOLVEMENT PREVIEW -->
+    <section class="section">
+      <div class="section-inner two-column">
         <div>
           <h2>Skills</h2>
 
-          <p class="skills-text">
-            I have experience in design, fabrication, testing, and collaborative engineering work. I enjoy CAD modeling, solving mechanical problems, and working through constraints in practical build environments.
+          <!-- REPLACE: summary text if you want -->
+          <p>
+            I have experience in CAD, fabrication, testing, and collaborative engineering through Formula SAE, robotics, and Scouting leadership.
           </p>
 
           <h3>Technical skills</h3>
-          <ul class="simple-list">
+          <ul>
+            <!-- REPLACE: edit or expand items -->
             <li>CAD: SolidWorks, Fusion 360, AutoCAD</li>
-            <li>Manufacturing fundamentals & prototyping</li>
-            <li>Basic FEA and simulation</li>
-            <li>Excel, documentation, measurement</li>
+            <li>Prototyping and basic machining</li>
+            <li>Intro FEA and simulation exposure</li>
+            <li>Measurement, documentation, Excel</li>
           </ul>
 
           <h3>Collaboration & leadership</h3>
-          <ul class="simple-list">
+          <ul>
+            <li>Team collaboration in technical projects</li>
             <li>Leadership through Scouting (Senior Patrol Leader)</li>
-            <li>Team collaboration in engineering environments</li>
-            <li>Organized planning and communication</li>
+            <li>Working under time and performance constraints</li>
           </ul>
         </div>
 
-        <!-- Involvement -->
         <div>
           <h2>Involvement</h2>
 
-          <div class="mini-panel">
-            <h3>Scouting</h3>
-            <p>
-              I’m a dedicated member of Troop 4 in Floral Park, NY, serving as a Senior Patrol Leader and Eagle Scout candidate. I’ve led meetings, organized trips, trained younger scouts, and helped run projects where preparation, responsibility, and teamwork are essential. Scouting has shaped how I lead and how I handle challenges.
-            </p>
-          </div>
-
+          <!-- Formula SAE preview -->
           <div class="mini-panel">
             <h3>Formula SAE</h3>
+            <!-- REPLACE: short FSAE summary -->
             <p>
-              At UConn Formula SAE, I have contributed to both Aerodynamics and IC Powertrain. I’ve worked on CAD, subsystem layout, decision-making, and supporting design and analysis tasks. The fast-paced, detail-driven environment has taught me the importance of iteration and communication across subsystems.
+              Work on the design and development of a student-built race car, contributing to CAD, packaging, and subsystem collaboration.
+            </p>
+            <p class="mini-panel-link">
+              <a href="sae.html">See more about Formula SAE →</a>
             </p>
           </div>
 
+          <!-- Scouting preview -->
+          <div class="mini-panel">
+            <h3>Scouting</h3>
+            <!-- REPLACE: short Scouting summary -->
+            <p>
+              Senior Patrol Leader and Eagle Scout candidate in Troop 4, Floral Park, NY, responsible for planning, training, and leading scouts.
+            </p>
+            <p class="mini-panel-link">
+              <a href="scouting.html">See more about Scouting →</a>
+            </p>
+          </div>
+
+          <!-- Robotics preview -->
           <div class="mini-panel">
             <h3>Robotics</h3>
+            <!-- REPLACE: short Robotics summary -->
             <p>
-              With the 4017 RoboPandas, I worked on fabrication, assembly, testing, and digital media. Our team qualified for the 2025 FIRST Tech Challenge World Championship. Being part of robotics taught me how to troubleshoot under pressure and work through mechanical challenges with a team.
+              Experience with 4017 RoboPandas, contributing to fabrication, assembly, testing, and event support at competitions.
+            </p>
+            <p class="mini-panel-link">
+              <a href="robotics.html">See more about Robotics →</a>
             </p>
           </div>
-
         </div>
       </div>
     </section>
+    <!-- END SKILLS + INVOLVEMENT PREVIEW -->
 
-    <!-- EDUCATION -->
-    <section class="section light-panel fade-in">
-      <div class="two-column">
-
+    <!-- BEGIN EDUCATION -->
+    <section class="section">
+      <div class="section-inner two-column">
         <div>
           <h2>Education</h2>
+          <!-- REPLACE: education details -->
           <p>
             University of Connecticut — B.S. Mechanical Engineering (Class of 2029)
+          </p>
+          <p>
+            Floral Park Memorial High School — Floral Park, NY
+          </p>
+          <p>
+            Sewanhaka High School — CTE Architectural Studies
           </p>
         </div>
 
         <div>
           <h3>Certifications & awards</h3>
-          <ul class="simple-list">
-            <li>Architectural Design Certification (YouScience)</li>
+          <ul>
+            <!-- REPLACE: real items -->
+            <li>Architectural Design 1 Career Certification (YouScience)</li>
             <li>Community Service & Leadership Award</li>
             <li>Eagle Scout Candidate</li>
           </ul>
         </div>
-
       </div>
     </section>
+    <!-- END EDUCATION -->
 
-    <!-- PROJECTS -->
-    <section class="section fade-in" id="projects-section">
-      <h2>Projects</h2>
+    <!-- BEGIN GALLERY PREVIEW -->
+    <section class="section">
+      <div class="section-inner">
+        <div class="gallery-header-row">
+          <h2>Gallery</h2>
+          <button id="gallery-toggle" class="btn tertiary" type="button">
+            Show gallery preview
+          </button>
+        </div>
 
-      <div class="two-column project-layout">
+        <div id="gallery-preview" class="gallery-preview">
+          <!-- REPLACE: small subset of images -->
+          <div class="gallery-grid">
+            <figure class="gallery-item">
+              <img src="GALLERY_IMAGE_ONE_FILE" alt="Gallery image one">
+              <figcaption>Caption for image one</figcaption>
+            </figure>
+            <figure class="gallery-item">
+              <img src="GALLERY_IMAGE_TWO_FILE" alt="Gallery image two">
+              <figcaption>Caption for image two</figcaption>
+            </figure>
+            <figure class="gallery-item">
+              <img src="GALLERY_IMAGE_THREE_FILE" alt="Gallery image three">
+              <figcaption>Caption for image three</figcaption>
+            </figure>
+          </div>
 
-        <article class="project-card">
-          <h3>Project One</h3>
-          <p class="project-summary">
-            Short high-level summary of project one.
+          <p class="gallery-more-link">
+            <a href="gallery.html">View full gallery →</a>
           </p>
-          <p class="project-details">
-            Full descriptive details about project one. You can describe design choices, testing, fabrication, or results here.
-          </p>
-        </article>
-
-        <article class="project-card">
-          <h3>Project Two</h3>
-          <p class="project-summary">
-            Short high-level summary of project two.
-          </p>
-          <p class="project-details">
-            Full descriptive details about project two.
-          </p>
-        </article>
-
-      </div>
-    </section>
-
-    <!-- GALLERY -->
-    <section class="section fade-in">
-      <div class="gallery-header-row">
-        <h2>Gallery</h2>
-        <button class="btn tertiary" id="gallery-toggle" type="button">
-          Show gallery
-        </button>
-      </div>
-
-      <div class="gallery-panel" id="gallery-panel">
-        <p class="gallery-intro">
-          A look at some of my builds, CAD models, prototypes, and engineering work.
-        </p>
-
-        <div class="gallery-grid">
-          <figure class="gallery-item">
-            <img src="GALLERY_IMAGE_ONE_FILE" alt="Image one">
-            <figcaption>Caption for image one.</figcaption>
-          </figure>
-
-          <figure class="gallery-item">
-            <img src="GALLERY_IMAGE_TWO_FILE" alt="Image two">
-            <figcaption>Caption for image two.</figcaption>
-          </figure>
-
-          <figure class="gallery-item">
-            <img src="GALLERY_IMAGE_THREE_FILE" alt="Image three">
-            <figcaption>Caption for image three.</figcaption>
-          </figure>
         </div>
       </div>
     </section>
+    <!-- END GALLERY PREVIEW -->
 
-    <footer class="page-footer fade-in">
-      <p>© 2025 Miles Lucatorto</p>
+    <!-- BEGIN CONTACT SECTION -->
+    <section class="section">
+      <div class="section-inner">
+        <h2>Contact</h2>
+        <p>
+          Email: Miles.lucatorto@gmail.com
+        </p>
+        <p>
+          LinkedIn:
+          <a href="https://www.linkedin.com/in/miles-lucatorto" target="_blank" rel="noreferrer">
+            linkedin.com/in/miles-lucatorto
+          </a>
+        </p>
+        <!-- Optional contact form can go here later if you want -->
+      </div>
+    </section>
+    <!-- END CONTACT SECTION -->
+
+    <!-- BEGIN FOOTER -->
+    <footer class="page-footer">
+      <p>© 2025 Miles Lucatorto · Made by Miles Lucatorto</p>
     </footer>
+    <!-- END FOOTER -->
 
   </div>
+
+  <!-- BEGIN FLOATING BOTTOM NAV -->
+  <nav class="bottom-nav">
+    <a href="index.html" class="bottom-nav-item">Home</a>
+    <a href="projects.html" class="bottom-nav-item">Projects</a>
+    <a href="gallery.html" class="bottom-nav-item">Gallery</a>
+    <a href="resume.html" class="bottom-nav-item">Resume</a>
+    <button id="theme-toggle" class="bottom-nav-item" type="button">Dark / Light</button>
+    <a href="#top" class="bottom-nav-item">Top</a>
+  </nav>
+  <!-- END FLOATING BOTTOM NAV -->
 
   <script src="script.js"></script>
 </body>
