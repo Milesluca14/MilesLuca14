@@ -11,7 +11,7 @@
   <!-- Font -->
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet" />
 
-  <!-- LinkedIn badge script (required by LinkedIn) -->
+  <!-- LinkedIn badge script (from LinkedIn) -->
   <script
     src="https://platform.linkedin.com/badges/js/profile.js"
     async
@@ -24,7 +24,7 @@
 <body id="top">
   <div class="page-wrapper">
 
-    <!-- BEGIN HERO -->
+    <!-- HERO -->
     <header class="hero">
       <div class="hero-inner">
         <div class="hero-text">
@@ -50,92 +50,58 @@
 
         <div class="hero-photo">
           <div class="hero-photo-frame hero-photo-large">
-            <!-- REPLACE: headshot file name -->
+            <!-- REPLACE: headshot file -->
             <img src="Untitled design (11).png" alt="Headshot of Miles Lucatorto" />
           </div>
         </div>
       </div>
     </header>
-    <!-- END HERO -->
 
-    <!-- BEGIN ABOUT -->
+    <!-- ABOUT + LARGE IMAGE -->
     <section class="section section-after-hero">
       <div class="section-inner two-column">
         <div>
           <h2>About</h2>
-
           <p>
             I am a Mechanical Engineering student at the University of Connecticut interested in design, manufacturing, and hands-on engineering. I like work that balances analysis with real builds, where the design has to fit, function, and be maintainable. I care about clear communication, clean CAD, and projects that teach something new every time.
           </p>
         </div>
 
         <div>
-          <h3>Contact me</h3>
-          <p>Email: Miles.lucatorto@gmail.com</p>
-
-          <!-- LinkedIn badge wrapper -->
-          <div class="linkedin-badge-wrapper">
-            <p class="linkedin-badge-title">LinkedIn</p>
-
-            <!-- Light mode badge -->
-            <div class="linkedin-badge linkedin-badge-light">
-              <div
-                class="badge-base LI-profile-badge"
-                data-locale="en_US"
-                data-size="medium"
-                data-theme="light"
-                data-type="HORIZONTAL"
-                data-vanity="miles-lucatorto"
-                data-version="v1">
-                <a
-                  class="badge-base__link LI-simple-link"
-                  href="https://www.linkedin.com/in/miles-lucatorto?trk=profile-badge">
-                  Miles Lucatorto
-                </a>
-              </div>
-            </div>
-
-            <!-- Dark mode badge -->
-            <div class="linkedin-badge linkedin-badge-dark">
-              <div
-                class="badge-base LI-profile-badge"
-                data-locale="en_US"
-                data-size="medium"
-                data-theme="dark"
-                data-type="HORIZONTAL"
-                data-vanity="miles-lucatorto"
-                data-version="v1">
-                <a
-                  class="badge-base__link LI-simple-link"
-                  href="https://www.linkedin.com/in/miles-lucatorto?trk=profile-badge">
-                  Miles Lucatorto
-                </a>
-              </div>
-            </div>
-          </div>
-          <!-- END LinkedIn badge wrapper -->
-        </div>
-      </div>
-    </section>
-    <!-- END ABOUT -->
-
-    <!-- BEGIN PROFILE IMAGE + INVOLVEMENT -->
-    <section class="section">
-      <div class="section-inner two-column">
-        <!-- Large image of you -->
-        <div>
           <h2>In the shop</h2>
-          <div class="skills-photo-frame">
-            <!-- REPLACE: file of you working / larger image -->
+          <div class="profile-photo-frame">
+            <!-- REPLACE: a larger working/ shop photo -->
             <img src="PROFILE_SECTION_IMAGE_FILE" alt="Miles working on a project" />
           </div>
-          <!-- Optional caption – edit or delete -->
-          <p class="skills-photo-caption">
+          <!-- Optional caption – change or delete -->
+          <p class="profile-photo-caption">
             SHORT_CAPTION_PLACEHOLDER
           </p>
         </div>
+      </div>
+    </section>
 
-        <!-- Involvement -->
+    <!-- SKILLS + INVOLVEMENT -->
+    <section class="section">
+      <div class="section-inner two-column">
+        <div>
+          <h2>Skills</h2>
+          <ul>
+            <li>CAD: SolidWorks</li>
+            <li>CAD: Fusion 360</li>
+            <li>CAD: AutoCAD</li>
+            <li>Basic FEA and simulation exposure</li>
+            <li>3D printing and prototype fabrication</li>
+            <li>Basic machining and shop work</li>
+            <li>Mechanical assembly and testing</li>
+            <li>Measurement and tolerancing awareness</li>
+            <li>Excel and data organization</li>
+            <li>Documentation and report writing</li>
+            <li>Team collaboration on technical projects</li>
+            <li>Leadership through Scouting</li>
+          </ul>
+        </div>
+
         <div>
           <h2>Involvement</h2>
 
@@ -180,17 +146,17 @@
         </div>
       </div>
     </section>
-    <!-- END PROFILE IMAGE + INVOLVEMENT -->
 
-    <!-- BEGIN EDUCATION -->
+    <!-- EDUCATION + CONTACT / LINKEDIN -->
     <section class="section">
       <div class="section-inner two-column">
+        <!-- Education -->
         <div>
           <h2>Education</h2>
 
           <div class="school-entry">
             <div class="school-logo-box">
-              <img src="Uconn.png" alt="UConn.png" />
+              <img src="Uconn.png" alt="UConn logo" />
             </div>
             <div>
               <p class="school-name">University of Connecticut</p>
@@ -200,7 +166,7 @@
 
           <div class="school-entry">
             <div class="school-logo-box">
-              <img src="FPM.png" alt="FPM.png" />
+              <img src="FPM.png" alt="Floral Park Memorial logo" />
             </div>
             <div>
               <p class="school-name">Floral Park Memorial High School</p>
@@ -210,7 +176,7 @@
 
           <div class="school-entry">
             <div class="school-logo-box">
-              <img src="SHS.png" alt="SHS.png" />
+              <img src="SHS.png" alt="Sewanhaka logo" />
             </div>
             <div>
               <p class="school-name">Sewanhaka High School · CTE</p>
@@ -219,41 +185,55 @@
           </div>
         </div>
 
+        <!-- Contact + LinkedIn badge -->
         <div>
-          <h3>Certifications & awards</h3>
-          <ul>
-            <li>Architectural Design 1 Career Certification (YouScience)</li>
-            <li>Community Service & Leadership Award</li>
-            <li>Eagle Scout Candidate</li>
-          </ul>
+          <h2>Contact</h2>
+          <p>Email: Miles.lucatorto@gmail.com</p>
+
+          <div class="linkedin-badge-wrapper">
+            <p class="linkedin-badge-title">LinkedIn</p>
+
+            <!-- Light mode badge -->
+            <div class="linkedin-badge linkedin-badge-light">
+              <div
+                class="badge-base LI-profile-badge"
+                data-locale="en_US"
+                data-size="medium"
+                data-theme="light"
+                data-type="HORIZONTAL"
+                data-vanity="miles-lucatorto"
+                data-version="v1">
+                <a
+                  class="badge-base__link LI-simple-link"
+                  href="https://www.linkedin.com/in/miles-lucatorto?trk=profile-badge">
+                  Miles Lucatorto
+                </a>
+              </div>
+            </div>
+
+            <!-- Dark mode badge -->
+            <div class="linkedin-badge linkedin-badge-dark">
+              <div
+                class="badge-base LI-profile-badge"
+                data-locale="en_US"
+                data-size="medium"
+                data-theme="dark"
+                data-type="HORIZONTAL"
+                data-vanity="miles-lucatorto"
+                data-version="v1">
+                <a
+                  class="badge-base__link LI-simple-link"
+                  href="https://www.linkedin.com/in/miles-lucatorto?trk=profile-badge">
+                  Miles Lucatorto
+                </a>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
-    <!-- END EDUCATION -->
 
-    <!-- NEW SKILLS SECTION (MOVED DOWN) -->
-    <section class="section">
-      <div class="section-inner">
-        <h2>Skills</h2>
-        <ul>
-          <li>CAD: SolidWorks</li>
-          <li>CAD: Fusion 360</li>
-          <li>CAD: AutoCAD</li>
-          <li>Basic FEA and simulation exposure</li>
-          <li>3D printing and prototype fabrication</li>
-          <li>Basic machining and shop work</li>
-          <li>Mechanical assembly and testing</li>
-          <li>Measurement and tolerancing awareness</li>
-          <li>Excel and data organization</li>
-          <li>Documentation and report writing</li>
-          <li>Team collaboration on technical projects</li>
-          <li>Leadership through Scouting</li>
-        </ul>
-      </div>
-    </section>
-    <!-- END SKILLS SECTION -->
-
-    <!-- BEGIN GALLERY PREVIEW -->
+    <!-- GALLERY PREVIEW -->
     <section class="section">
       <div class="section-inner">
         <div class="gallery-header-row">
@@ -293,32 +273,15 @@
         </div>
       </div>
     </section>
-    <!-- END GALLERY PREVIEW -->
 
-    <!-- BEGIN CONTACT (BOTTOM) -->
-    <section class="section">
-      <div class="section-inner">
-        <h2>Contact me</h2>
-        <p>Email: Miles.lucatorto@gmail.com</p>
-        <p>
-          LinkedIn:
-          <a href="https://www.linkedin.com/in/miles-lucatorto" target="_blank" rel="noreferrer">
-            linkedin.com/in/miles-lucatorto
-          </a>
-        </p>
-      </div>
-    </section>
-    <!-- END CONTACT -->
-
-    <!-- BEGIN FOOTER -->
+    <!-- FOOTER -->
     <footer class="page-footer">
       <p>© 2025 Miles Lucatorto · Made by Miles Lucatorto</p>
     </footer>
-    <!-- END FOOTER -->
 
   </div>
 
-  <!-- BEGIN FLOATING BOTTOM NAV -->
+  <!-- FLOATING BOTTOM NAV -->
   <nav class="bottom-nav">
     <a href="index.html" class="bottom-nav-item">Home</a>
     <a href="projects.html" class="bottom-nav-item">Projects</a>
@@ -327,7 +290,6 @@
     <button id="theme-toggle" class="bottom-nav-item" type="button">Dark/Light</button>
     <a href="#top" class="bottom-nav-item">Top</a>
   </nav>
-  <!-- END FLOATING BOTTOM NAV -->
 
   <script src="script.js"></script>
 </body>
