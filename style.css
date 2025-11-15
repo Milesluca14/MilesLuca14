@@ -52,37 +52,35 @@ body.dark-mode a {
   padding: 2.5rem 1.5rem 3rem;
 }
 
-.page-wrapper.narrow-page {
-  max-width: 800px;
-}
-
 /* Sections */
 .section {
   margin-bottom: 2.6rem;
-}
-
-.section-after-hero {
-  margin-top: 1.8rem;
 }
 
 .section-inner {
   background: transparent;
 }
 
-/* Two-column grid */
-.two-column {
-  display: grid;
-  grid-template-columns: minmax(0, 1.15fr) minmax(0, 0.9fr);
-  gap: 2rem;
+/* Headings */
+h1,
+h2,
+h3 {
+  margin-top: 0;
 }
 
-@media (max-width: 840px) {
-  .two-column {
-    grid-template-columns: 1fr;
-  }
+h2 {
+  font-size: 1.7rem;
 }
 
-/* Hero */
+h3 {
+  font-size: 1.2rem;
+}
+
+p {
+  margin-top: 0.3rem;
+}
+
+/* HERO */
 .hero {
   background: var(--uconn-blue-pale);
   border-radius: 20px;
@@ -164,75 +162,6 @@ body.dark-mode .hero {
   object-fit: cover;
 }
 
-/* Headings */
-h1,
-h2,
-h3 {
-  margin-top: 0;
-}
-
-h2 {
-  font-size: 1.7rem;
-}
-
-h3 {
-  font-size: 1.2rem;
-}
-
-/* Text */
-p {
-  margin-top: 0.3rem;
-}
-
-/* Lists */
-ul {
-  padding-left: 1.2rem;
-}
-
-/* Large profile image in About section */
-.profile-photo-frame {
-  width: 100%;
-  max-width: 520px;
-  aspect-ratio: 4 / 3;
-  border-radius: 18px;
-  border: 1px solid var(--border-subtle);
-  overflow: hidden;
-  background: var(--panel-bg);
-  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.12);
-}
-
-.profile-photo-frame img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.profile-photo-caption {
-  margin-top: 0.6rem;
-  font-size: 0.9rem;
-  color: var(--text-muted);
-}
-
-/* Involvement cards */
-.mini-panel {
-  background: var(--panel-bg);
-  border-radius: 16px;
-  padding: 1.1rem 1.2rem;
-  border: 1px solid var(--border-subtle);
-  margin-bottom: 1rem;
-  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.06);
-}
-
-.mini-panel-link {
-  margin-top: 0.6rem;
-}
-
-.involvement-dates {
-  font-size: 0.85rem;
-  color: var(--text-muted);
-  margin-left: 0.5rem;
-}
-
 /* Buttons */
 .btn {
   display: inline-block;
@@ -265,7 +194,111 @@ ul {
   font-size: 0.85rem;
 }
 
-/* Education */
+/* MAIN GRID LAYOUT (matches your sketch) */
+.layout-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.05fr) minmax(0, 1.05fr);
+  grid-template-rows: auto auto auto;
+  grid-template-areas:
+    "skills inshop"
+    "education involvement"
+    "contact involvement";
+  gap: 1.6rem;
+  align-items: stretch;
+}
+
+.skills-block {
+  grid-area: skills;
+}
+
+.inshop-block {
+  grid-area: inshop;
+}
+
+.education-block {
+  grid-area: education;
+}
+
+.contact-block {
+  grid-area: contact;
+}
+
+.involvement-block {
+  grid-area: involvement;
+}
+
+/* Card styling for each block */
+.block-card {
+  background: var(--panel-bg);
+  border-radius: 18px;
+  padding: 1.4rem 1.5rem;
+  border: 1px solid var(--border-subtle);
+  box-shadow: 0 14px 32px rgba(0, 0, 0, 0.06);
+}
+
+@media (max-width: 840px) {
+  .layout-grid {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "skills"
+      "inshop"
+      "education"
+      "contact"
+      "involvement";
+  }
+}
+
+/* Large image in "In the shop" */
+.profile-photo-frame {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  border-radius: 16px;
+  border: 1px solid var(--border-subtle);
+  overflow: hidden;
+  background: var(--panel-bg);
+  margin-top: 0.6rem;
+}
+
+.profile-photo-frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.profile-photo-caption {
+  margin-top: 0.55rem;
+  font-size: 0.9rem;
+  color: var(--text-muted);
+}
+
+/* Involvement inner panels (inside involvement card) */
+.mini-panel {
+  background: rgba(255, 255, 255, 0.7);
+  border-radius: 12px;
+  padding: 0.9rem 1rem;
+  border: 1px solid var(--border-subtle);
+  margin-top: 0.7rem;
+}
+
+body.dark-mode .mini-panel {
+  background: rgba(5, 8, 20, 0.8);
+}
+
+.mini-panel:first-of-type {
+  margin-top: 0.4rem;
+}
+
+.mini-panel-link {
+  margin-top: 0.45rem;
+}
+
+.involvement-dates {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  margin-left: 0.5rem;
+}
+
+/* Education entries */
 .school-entry {
   display: flex;
   align-items: center;
@@ -313,7 +346,7 @@ ul {
   color: var(--text-muted);
 }
 
-/* LinkedIn renders card UI; we just choose which theme shows */
+/* Show light badge in light mode, dark badge in dark mode */
 .linkedin-badge-light {
   display: block;
 }
@@ -330,7 +363,7 @@ body.dark-mode .linkedin-badge-dark {
   display: block;
 }
 
-/* Gallery preview */
+/* Gallery */
 .gallery-header-row {
   display: flex;
   justify-content: space-between;
@@ -374,72 +407,6 @@ body.dark-mode .linkedin-badge-dark {
   margin-top: 0.9rem;
 }
 
-/* Full gallery grid (gallery.html) */
-.gallery-page-grid {
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-}
-
-@media (max-width: 840px) {
-  .gallery-page-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-}
-
-@media (max-width: 520px) {
-  .gallery-page-grid {
-    grid-template-columns: 1fr;
-  }
-}
-
-/* Projects layout (projects.html) */
-.project-page-grid {
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
-}
-
-.project-block {
-  background: var(--panel-bg);
-  border-radius: 18px;
-  padding: 1.6rem 1.8rem;
-  border: 1px solid var(--border-subtle);
-  box-shadow: 0 14px 32px rgba(0, 0, 0, 0.08);
-}
-
-.project-meta {
-  color: var(--text-muted);
-  font-size: 0.9rem;
-}
-
-.project-layout {
-  display: grid;
-  grid-template-columns: minmax(0, 1.2fr) minmax(0, 0.8fr);
-  gap: 1.1rem;
-  margin-top: 0.7rem;
-}
-
-@media (max-width: 840px) {
-  .project-layout {
-    grid-template-columns: 1fr;
-  }
-}
-
-.project-image img {
-  width: 100%;
-  border-radius: 12px;
-  border: 1px solid var(--border-subtle);
-}
-
-/* Resume frame (resume.html) */
-.resume-frame {
-  width: 100%;
-  height: 80vh;
-  border: 1px solid var(--border-subtle);
-  border-radius: 14px;
-  background: var(--panel-bg);
-  box-shadow: 0 14px 32px rgba(0, 0, 0, 0.08);
-}
-
 /* Footer */
 .page-footer {
   margin-top: 1rem;
@@ -480,7 +447,7 @@ body.dark-mode .bottom-nav {
   color: var(--text-main);
 }
 
-/* Back links (other pages) */
+/* Back links on other pages */
 .back-link {
   margin-top: 0.8rem;
 }
