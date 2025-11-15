@@ -194,40 +194,23 @@ body.dark-mode .hero {
   font-size: 0.85rem;
 }
 
-/* MAIN GRID LAYOUT (matches your sketch) */
-.layout-grid {
+/* MAIN GRID (matches your sketch) */
+.main-grid {
   display: grid;
   grid-template-columns: minmax(0, 1.05fr) minmax(0, 1.05fr);
-  grid-template-rows: auto auto auto;
-  grid-template-areas:
-    "skills inshop"
-    "education involvement"
-    "contact involvement";
   gap: 1.6rem;
-  align-items: stretch;
+  align-items: flex-start;
 }
 
-.skills-block {
-  grid-area: skills;
+/* left column: stacked cards */
+.grid-left,
+.grid-right {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
 }
 
-.inshop-block {
-  grid-area: inshop;
-}
-
-.education-block {
-  grid-area: education;
-}
-
-.contact-block {
-  grid-area: contact;
-}
-
-.involvement-block {
-  grid-area: involvement;
-}
-
-/* Card styling for each block */
+/* cards */
 .block-card {
   background: var(--panel-bg);
   border-radius: 18px;
@@ -236,19 +219,7 @@ body.dark-mode .hero {
   box-shadow: 0 14px 32px rgba(0, 0, 0, 0.06);
 }
 
-@media (max-width: 840px) {
-  .layout-grid {
-    grid-template-columns: 1fr;
-    grid-template-areas:
-      "skills"
-      "inshop"
-      "education"
-      "contact"
-      "involvement";
-  }
-}
-
-/* Large image in "In the shop" */
+/* "In the shop" large image */
 .profile-photo-frame {
   width: 100%;
   aspect-ratio: 4 / 3;
@@ -271,7 +242,7 @@ body.dark-mode .hero {
   color: var(--text-muted);
 }
 
-/* Involvement inner panels (inside involvement card) */
+/* Involvement inner panels */
 .mini-panel {
   background: rgba(255, 255, 255, 0.7);
   border-radius: 12px;
@@ -346,7 +317,7 @@ body.dark-mode .mini-panel {
   color: var(--text-muted);
 }
 
-/* Show light badge in light mode, dark badge in dark mode */
+/* show light badge in light mode, dark in dark mode */
 .linkedin-badge-light {
   display: block;
 }
@@ -361,6 +332,13 @@ body.dark-mode .linkedin-badge-light {
 
 body.dark-mode .linkedin-badge-dark {
   display: block;
+}
+
+/* Responsive: stack columns on small screens */
+@media (max-width: 840px) {
+  .main-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 /* Gallery */
@@ -447,7 +425,7 @@ body.dark-mode .bottom-nav {
   color: var(--text-main);
 }
 
-/* Back links on other pages */
+/* Back link (other pages) */
 .back-link {
   margin-top: 0.8rem;
 }
