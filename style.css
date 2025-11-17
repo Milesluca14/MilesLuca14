@@ -703,7 +703,21 @@ body.dark-mode .linkedin-badge-dark {
   border-radius: 18px 18px 0 0;
   box-shadow: 0 -10px 24px rgba(0, 0, 0, 0.18);
   z-index: 20;
+
+  /* NEW — float-motion */
+  transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1),
+              box-shadow 0.35s cubic-bezier(0.22, 1, 0.36, 1);
 }
+
+body.scrolling-down .bottom-nav {
+  transform: translateX(-50%) translateY(14px);
+  box-shadow: 0 -4px 14px rgba(0, 0, 0, 0.08);
+}
+
+body.scrolling-up .bottom-nav {
+  transform: translateX(-50%) translateY(0);
+}
+
 
 body.dark-mode .bottom-nav {
   background: rgba(5, 8, 20, 0.92);
