@@ -31,6 +31,7 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 });
 
+
 // ======================================
 // Gallery toggle (Home page only)
 // ======================================
@@ -50,6 +51,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 });
+
 
 // ======================================
 // Scroll reveal animations
@@ -88,6 +90,7 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 });
 
+
 // ======================================
 // FLOATING BOTTOM NAV — SCROLL MOTION
 // ======================================
@@ -98,11 +101,11 @@ document.addEventListener("DOMContentLoaded", () => {
     const currentY = window.pageYOffset;
 
     if (currentY > lastY) {
-      // scrolling down
+      // USER IS SCROLLING DOWN
       document.body.classList.add("scrolling-down");
       document.body.classList.remove("scrolling-up");
     } else {
-      // scrolling up
+      // USER IS SCROLLING UP
       document.body.classList.add("scrolling-up");
       document.body.classList.remove("scrolling-down");
     }
