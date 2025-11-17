@@ -700,47 +700,37 @@ body.dark-mode .linkedin-badge-dark {
 .bottom-nav {
   position: fixed;
   left: 50%;
-  bottom: 0;
-  transform: translateX(-50%) translateY(0);
+  bottom: 40px; /* <-- FLOAT above bottom */
+  transform: translateX(-50%);
   background: rgba(255, 255, 255, 0.92);
   backdrop-filter: blur(14px);
-  border-top: 1px solid var(--border-subtle);
+  border: 1px solid var(--border-subtle);
   display: flex;
   justify-content: center;
-  gap: 0.5rem;
-  padding: 0.4rem 0.7rem;
-  width: 100%;
-  max-width: 640px;
-  border-radius: 18px 18px 0 0;
-  box-shadow: 0 -10px 24px rgba(0, 0, 0, 0.18);
-  z-index: 20;
+  gap: 0.6rem;
+  padding: 0.5rem 0.9rem;
+  width: auto;
+  border-radius: 22px;
+  box-shadow: 0 12px 36px rgba(0,0,0,0.18);
+  z-index: 999;
 
-  /* animated floating */
-  transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1),
+  /* smooth floating */
+  transition: bottom 0.35s cubic-bezier(0.22, 1, 0.36, 1),
+              transform 0.35s cubic-bezier(0.22, 1, 0.36, 1),
               box-shadow 0.35s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
-/* When scrolling down, the bar dips slightly */
+/* When scrolling DOWN – drop closer to bottom */
 body.scrolling-down .bottom-nav {
-  transform: translateX(-50%) translateY(14px);
-  box-shadow: 0 -6px 12px rgba(0, 0, 0, 0.12);
+  bottom: 10px; /* move downward */
+  box-shadow: 0 6px 18px rgba(0,0,0,0.12);
 }
 
-/* When scrolling up, it rises into view */
+/* When scrolling UP – lift up higher */
 body.scrolling-up .bottom-nav {
-  transform: translateX(-50%) translateY(0);
+  bottom: 55px; /* move upward (follows user) */
+  box-shadow: 0 16px 38px rgba(0,0,0,0.20);
 }
-
-
-body.scrolling-down .bottom-nav {
-  transform: translateX(-50%) translateY(14px);
-  box-shadow: 0 -4px 14px rgba(0, 0, 0, 0.08);
-}
-
-body.scrolling-up .bottom-nav {
-  transform: translateX(-50%) translateY(0);
-}
-
 
 body.dark-mode .bottom-nav {
   background: rgba(5, 8, 20, 0.92);
