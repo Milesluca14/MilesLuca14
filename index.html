@@ -28,13 +28,9 @@
 <body id="top" class="scrolling-up">
   <div class="page-wrapper">
 
-
-    <!-- ====================================================== -->
-    <!-- HERO (Shortened, no buttons, image moved up slightly) -->
-    <!-- ====================================================== -->
+    <!-- HERO -->
     <header class="hero">
       <div class="hero-inner">
-
         <div class="hero-text">
           <h1 class="hero-title-main">Miles Lucatorto</h1>
 
@@ -56,27 +52,18 @@
             <img src="Untitled design (11).png" alt="Headshot of Miles Lucatorto" />
           </div>
         </div>
-
       </div>
     </header>
 
-
-
-    <!-- ====================================================== -->
-    <!-- STATIC MID-NAVIGATION BAR UNDER HERO -->
-    <!-- ====================================================== -->
+    <!-- STATIC NAV BAR UNDER HERO -->
     <nav class="mid-nav" aria-label="Primary site navigation">
       <a href="index.html" class="mid-nav-item">Home</a>
       <a href="projects.html" class="mid-nav-item">Projects</a>
       <a href="gallery.html" class="mid-nav-item">Gallery</a>
       <a href="resume.html" class="mid-nav-item">Resume</a>
-
-      <!-- Theme toggle -->
-      <button id="theme-toggle" class="mid-nav-item theme-btn" type="button">
+      <button id="theme-toggle" class="mid-nav-item" type="button">
         Dark / Light
       </button>
-
-      <!-- LinkedIn -->
       <a
         href="https://www.linkedin.com/in/miles-lucatorto"
         target="_blank"
@@ -86,35 +73,46 @@
       </a>
     </nav>
 
-
-
-    <!-- ====================================================== -->
-    <!-- ABOUT ME (Spaced evenly under mid-nav) -->
-    <!-- ====================================================== -->
+    <!-- ABOUT (full width) -->
     <section class="section section-after-hero">
       <div class="section-inner">
         <h2>About me</h2>
         <p>
-          I am a Mechanical Engineering student interested in design, manufacturing, and practical engineering.
-          I like work that balances analysis with real builds, where the design must fit, function, and be maintainable.
+          I am a Mechanical Engineering student at the University of Connecticut interested in design, manufacturing, and practical engineering.
+          I like work that balances analysis with real builds, where the design has to fit, function, and be maintainable.
           I care about clear communication, clean CAD, and projects that teach something new every time.
         </p>
+
+        <!-- Performance metrics -->
+        <div class="metrics-grid">
+          <div class="metric-card">
+            <div class="metric-label">Money Raised</div>
+            <div class="metric-value" data-target="0">$0</div>
+          </div>
+          <div class="metric-card">
+            <div class="metric-label">Volunteer Hours</div>
+            <div class="metric-value" data-target="0">0</div>
+          </div>
+          <div class="metric-card">
+            <div class="metric-label">Projects Completed</div>
+            <div class="metric-value" data-target="0">0</div>
+          </div>
+          <div class="metric-card">
+            <div class="metric-label">CAD Hours</div>
+            <div class="metric-value" data-target="0">0</div>
+          </div>
+        </div>
       </div>
     </section>
 
-
-
-    <!-- ====================================================== -->
-    <!-- MAIN GRID: LEFT + RIGHT COLUMNS (FULL RESTORED CONTENT) -->
-    <!-- ====================================================== -->
+    <!-- MAIN GRID: Skills / In the shop / Education / Contact / Involvement -->
     <section class="section">
       <div class="section-inner main-grid">
 
-
-        <!-- ===================== LEFT COLUMN ===================== -->
+        <!-- LEFT COLUMN -->
         <div class="grid-left">
 
-          <!-- SKILLS -->
+          <!-- Skills -->
           <section class="block-card skills-block">
             <h2>Skills</h2>
             <ul>
@@ -133,8 +131,7 @@
             </ul>
           </section>
 
-
-          <!-- EDUCATION -->
+          <!-- Education -->
           <section class="block-card education-block">
             <h2>Education</h2>
 
@@ -169,8 +166,7 @@
             </div>
           </section>
 
-
-          <!-- CONTACT -->
+          <!-- Contact -->
           <section class="block-card contact-block">
             <h2>Contact</h2>
             <p>Email: Miles.lucatorto@gmail.com</p>
@@ -188,8 +184,9 @@
                   data-type="HORIZONTAL"
                   data-vanity="miles-lucatorto"
                   data-version="v1">
-                  <a class="badge-base__link LI-simple-link"
-                     href="https://www.linkedin.com/in/miles-lucatorto?trk=profile-badge">
+                  <a
+                    class="badge-base__link LI-simple-link"
+                    href="https://www.linkedin.com/in/miles-lucatorto?trk=profile-badge">
                     Miles Lucatorto
                   </a>
                 </div>
@@ -205,8 +202,9 @@
                   data-type="HORIZONTAL"
                   data-vanity="miles-lucatorto"
                   data-version="v1">
-                  <a class="badge-base__link LI-simple-link"
-                     href="https://www.linkedin.com/in/miles-lucatorto?trk=profile-badge">
+                  <a
+                    class="badge-base__link LI-simple-link"
+                    href="https://www.linkedin.com/in/miles-lucatorto?trk=profile-badge">
                     Miles Lucatorto
                   </a>
                 </div>
@@ -216,25 +214,21 @@
 
         </div>
 
-
-
-        <!-- ===================== RIGHT COLUMN ===================== -->
+        <!-- RIGHT COLUMN -->
         <div class="grid-right">
 
-          <!-- IN THE SHOP -->
+          <!-- In the shop -->
           <section class="block-card inshop-block">
             <h2>Eagle Scout Project – Field Work</h2>
             <div class="profile-photo-frame">
-              <img src="sexton_image.jpg"
-                   alt="Miles working on Eagle Scout project" />
+              <img src="sexton_image.jpg" alt="Miles working on Eagle Scout project" />
             </div>
             <p class="profile-photo-caption">
               Eagle Scout project with Mr. Sexton.
             </p>
           </section>
 
-
-          <!-- INVOLVEMENT -->
+          <!-- Involvement -->
           <section class="block-card involvement-block">
             <h2>Involvement</h2>
 
@@ -244,7 +238,7 @@
                 <span class="involvement-dates">2025 – Present</span>
               </h3>
               <p>
-                Work on the design and development of a student-built race car, contributing to CAD, packaging, and subsystem collaboration.
+                Work on the design and development of a student built race car, contributing to CAD, packaging, and subsystem collaboration.
               </p>
               <p class="mini-panel-link">
                 <a href="sae.html">See more about Formula SAE →</a>
@@ -276,22 +270,15 @@
                 <a href="robotics.html">See more about Robotics →</a>
               </p>
             </article>
-
           </section>
 
         </div>
-
       </div>
     </section>
 
-
-
-    <!-- ====================================================== -->
-    <!-- GALLERY SECTION (FULL RESTORED) -->
-    <!-- ====================================================== -->
+    <!-- GALLERY -->
     <section class="section">
       <div class="section-inner">
-
         <div class="gallery-header-row">
           <h2>Gallery</h2>
           <button id="gallery-toggle" class="btn tertiary" type="button">
@@ -301,7 +288,6 @@
 
         <div id="gallery-preview" class="gallery-preview">
           <div class="gallery-grid">
-
             <figure class="gallery-item">
               <div class="gallery-window">
                 <img src="lab_picture.PNG" alt="Laboratory work" />
@@ -322,41 +308,23 @@
               </div>
               <figcaption>Reverse engineering project</figcaption>
             </figure>
-
           </div>
 
           <p class="gallery-more-link">
             <a href="gallery.html">View full gallery →</a>
           </p>
         </div>
-
       </div>
     </section>
 
-
-
-    <!-- ====================================================== -->
     <!-- FOOTER -->
-    <!-- ====================================================== -->
     <footer class="page-footer">
       <p>© 2025 Miles Lucatorto · Made by Miles Lucatorto</p>
     </footer>
 
-
-
-    <!-- ====================================================== -->
-    <!-- NEW BACK TO TOP ARROW -->
-    <!-- ====================================================== -->
-    <a href="#top" class="back-to-top" aria-label="Back to top">↑</a>
-
-
   </div>
 
-
-
-  <!-- ====================================================== -->
-  <!-- FLOATING BOTTOM NAVIGATION -->
-  <!-- ====================================================== -->
+  <!-- FLOATING BOTTOM NAV -->
   <nav class="bottom-nav" aria-label="Quick navigation">
     <a href="index.html" class="bottom-nav-item">Home</a>
     <a href="projects.html" class="bottom-nav-item">Projects</a>
@@ -364,9 +332,21 @@
     <a href="resume.html" class="bottom-nav-item">Resume</a>
   </nav>
 
+  <!-- SCROLL TAPE MEASURE -->
+  <div class="scroll-tape">
+    <div class="tape-head"></div>
 
-  <!-- JS FILE -->
+    <div class="tape-strip">
+      <div class="tape-track"></div>
+    </div>
+
+    <div class="tape-indicator"></div>
+
+    <div class="tape-reading">
+      <span id="scroll-mm-value">0</span> mm
+    </div>
+  </div>
+
   <script src="script.js"></script>
-
 </body>
 </html>
