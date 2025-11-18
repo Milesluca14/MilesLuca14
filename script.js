@@ -168,30 +168,39 @@ function animateNumber(el, target) {
 
 
 // ======================================
-// Scroll Tape Measure – grows & displays mm
+// Scroll Tape Measure – scroll-linked + draggable
 // ======================================
 function setupScrollTape() {
   const tapeStrip = document.querySelector(".tape-strip");
+  const tapeTrack = document.querySelector(".tape-track");
   const scrollValueEl = document.getElementById("scroll-mm-value");
-  if (!tapeStrip || !scrollValueEl) return;
 
-  const maxTapeHeight = 260;  // px
-  const baseTapeHeight = 30;  // px at page top
-  const maxMm = 3000;         // reading at page bottom
+  if (!tapeStrip || !tapeTrack || !scrollValueEl) return;
 
+  const maxMm = 3000; // reading at bottom of page
   let ticking = false;
+  let dragging = false;
 
-  function updateTape() {
-    const scrollTop = window.scrollY || window.pageYOffset;
+  function getScrollRange() {
     const docHeight = document.documentElement.scrollHeight;
     const winHeight = window.innerHeight;
-    const scrollRange = docHeight - winHeight;
+    return Math.max(docHeight - winHeight, 0);
+  }
+
+  function updateFromScroll() {
+    const scrollTop = window.scrollY || window.pageYOffset;
+    const scrollRange = getScrollRange();
 
     const ratio = scrollRange > 0 ? scrollTop / scrollRange : 0;
     const clamped = Math.min(Math.max(ratio, 0), 1);
 
-    const newHeight = baseTapeHeight + maxTapeHeight * clamped;
-    tapeStrip.style.height = `${newHeight}px`;
+    const viewHeight = tapeStrip.offsetHeight;
+    const trackHeight = tapeTrack.offsetHeight;
+    const maxOffset = Math.max(trackHeight - viewHeight, 0);
+
+    // Move tape upward as page scrolls down (0 at top)
+    const offset = -maxOffset * clamped;
+    tapeTrack.style.transform = `translateY(${offset}px)`;
 
     const mm = Math.round(maxMm * clamped);
     scrollValueEl.textContent = mm;
@@ -199,15 +208,83 @@ function setupScrollTape() {
     ticking = false;
   }
 
-  function onScroll() {
+  function handleScroll() {
     if (!ticking) {
-      requestAnimationFrame(updateTape);
+      requestAnimationFrame(updateFromScroll);
       ticking = true;
     }
   }
 
-  updateTape(); // initialize on load
-  window.addEventListener("scroll", onScroll);
-  window.addEventListener("resize", onScroll);
-}
+  // Convert pointer position on tape into scroll position
+  function scrollFromPointer(clientY) {
+    const rect = tapeStrip.getBoundingClientRect();
+    if (rect.height <= 0) return;
 
+    const relativeY = clientY - rect.top;
+    let ratio = relativeY / rect.height;
+    ratio = Math.min(Math.max(ratio, 0), 1);
+
+    const scrollRange = getScrollRange();
+    const newTop = scrollRange * ratio;
+
+    window.scrollTo({ top: newTop, behavior: "auto" });
+  }
+
+  // Mouse drag
+  function onMouseDown(e) {
+    dragging = true;
+    document.body.classList.add("no-select");
+    scrollFromPointer(e.clientY);
+  }
+
+  function onMouseMove(e) {
+    if (!dragging) return;
+    scrollFromPointer(e.clientY);
+  }
+
+  function onMouseUp() {
+    if (!dragging) return;
+    dragging = false;
+    document.body.classList.remove("no-select");
+  }
+
+  tapeStrip.addEventListener("mousedown", onMouseDown);
+  document
+    .querySelector(".tape-indicator")
+    ?.addEventListener("mousedown", onMouseDown);
+
+  window.addEventListener("mousemove", onMouseMove);
+  window.addEventListener("mouseup", onMouseUp);
+
+  // Touch drag
+  function onTouchStart(e) {
+    dragging = true;
+    document.body.classList.add("no-select");
+    scrollFromPointer(e.touches[0].clientY);
+  }
+
+  function onTouchMove(e) {
+    if (!dragging) return;
+    scrollFromPointer(e.touches[0].clientY);
+    e.preventDefault();
+  }
+
+  function onTouchEnd() {
+    if (!dragging) return;
+    dragging = false;
+    document.body.classList.remove("no-select");
+  }
+
+  tapeStrip.addEventListener("touchstart", onTouchStart, { passive: false });
+  tapeStrip.addEventListener("touchmove", onTouchMove, { passive: false });
+  tapeStrip.addEventListener("touchend", onTouchEnd);
+  document
+    .querySelector(".tape-indicator")
+    ?.addEventListener("touchstart", onTouchStart, { passive: false });
+
+  window.addEventListener("scroll", handleScroll);
+  window.addEventListener("resize", handleScroll);
+
+  // Initial position
+  updateFromScroll();
+}
