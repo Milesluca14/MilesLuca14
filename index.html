@@ -9,7 +9,10 @@
   <link rel="icon" type="image/png" href="New_ML.png" />
 
   <!-- Font -->
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&display=swap"
+    rel="stylesheet"
+  />
 
   <!-- LinkedIn badge script -->
   <script
@@ -21,7 +24,8 @@
 
   <link rel="stylesheet" href="style.css" />
 </head>
-<body id="top">
+
+<body id="top" class="scrolling-up">
   <div class="page-wrapper">
 
     <!-- HERO (full width) -->
@@ -35,11 +39,11 @@
           </p>
 
           <p class="hero-intro">
-            I’m a Mechanical Engineering student at the University of Connecticut who’s motivated by solving problems and making ideas work in the real world. I enjoy bringing technical and creative thinking together, whether I’m designing parts in CAD, machining components, or testing systems to improve performance.
+            I am a Mechanical Engineering student at the University of Connecticut who is motivated by solving problems and making ideas work in the real world. I enjoy bringing technical and creative thinking together, whether I am designing parts in CAD, machining components, or testing systems to improve performance.
           </p>
 
           <p class="hero-education-line">
-            B.S. Mechanical Engineering || Class of 2029
+            B.S. Mechanical Engineering · Class of 2029
           </p>
 
           <div class="hero-buttons">
@@ -50,7 +54,6 @@
 
         <div class="hero-photo">
           <div class="hero-photo-frame hero-photo-large">
-            <!-- REPLACE: headshot file -->
             <img src="Untitled design (11).png" alt="Headshot of Miles Lucatorto" />
           </div>
         </div>
@@ -62,7 +65,7 @@
       <div class="section-inner">
         <h2>About me</h2>
         <p>
-          I am a Mechanical Engineering student at the University of Connecticut interested in design, manufacturing, and hands-on engineering. I like work that balances analysis with real builds, where the design has to fit, function, and be maintainable. I care about clear communication, clean CAD, and projects that teach something new every time.
+          I am a Mechanical Engineering student at the University of Connecticut interested in design, manufacturing, and practical engineering. I like work that balances analysis with real builds, where the design has to fit, function, and be maintainable. I care about clear communication, clean CAD, and projects that teach something new every time.
         </p>
       </div>
     </section>
@@ -183,15 +186,14 @@
           <section class="block-card inshop-block">
             <h2>Eagle Scout Project – Field Work</h2>
             <div class="profile-photo-frame">
-              <!-- REPLACE: your larger working photo -->
-              <img src="sexton_image.jpg" alt="sexton_image.jpg" />
+              <img src="sexton_image.jpg" alt="Miles working on Eagle Scout project" />
             </div>
             <p class="profile-photo-caption">
-              Eagle Scout Project w/ Mr. Sexton
+              Eagle Scout project with Mr. Sexton.
             </p>
           </section>
 
-          <!-- Involvement (fills the right side under In the shop) -->
+          <!-- Involvement -->
           <section class="block-card involvement-block">
             <h2>Involvement</h2>
 
@@ -201,7 +203,7 @@
                 <span class="involvement-dates">2025 – Present</span>
               </h3>
               <p>
-                Work on the design and development of a student-built race car, contributing to CAD, packaging, and subsystem collaboration.
+                Work on the design and development of a student built race car, contributing to CAD, packaging, and subsystem collaboration.
               </p>
               <p class="mini-panel-link">
                 <a href="sae.html">See more about Formula SAE →</a>
@@ -214,7 +216,7 @@
                 <span class="involvement-dates">2018 – Present</span>
               </h3>
               <p>
-                Senior Patrol Leader and Eagle Scout candidate in Troop 4, Floral Park, NY, responsible for planning, training, and leading scouts.
+                Senior Patrol Leader and Eagle Scout candidate in Troop 4, Floral Park, New York, responsible for planning, training, and leading scouts.
               </p>
               <p class="mini-panel-link">
                 <a href="scouting.html">See more about Boy Scouts of America →</a>
@@ -253,23 +255,23 @@
           <div class="gallery-grid">
             <figure class="gallery-item">
               <div class="gallery-window">
-                <img src="lab_picture.PNG" alt="Gallery image one" />
+                <img src="lab_picture.PNG" alt="Laboratory work" />
               </div>
-              <figcaption>Labratory Work</figcaption>
+              <figcaption>Laboratory work</figcaption>
             </figure>
 
             <figure class="gallery-item">
               <div class="gallery-window">
-                <img src="in_the_car.jpg" alt="Gallery image two" />
+                <img src="in_the_car.jpg" alt="UConn Formula SAE volunteer work" />
               </div>
-              <figcaption>UCONN Formula SAE Volunteer Work</figcaption>
+              <figcaption>UConn Formula SAE volunteer work</figcaption>
             </figure>
 
             <figure class="gallery-item">
               <div class="gallery-window">
-                <img src="in_the_shop.jpg" alt="Gallery image three" />
+                <img src="in_the_shop.jpg" alt="Reverse engineering project" />
               </div>
-              <figcaption>Reverse Engineering Project</figcaption>
+              <figcaption>Reverse engineering project</figcaption>
             </figure>
           </div>
 
@@ -288,12 +290,14 @@
   </div>
 
   <!-- FLOATING BOTTOM NAV -->
-  <nav class="bottom-nav">
+  <nav class="bottom-nav" aria-label="Site navigation">
     <a href="index.html" class="bottom-nav-item">Home</a>
     <a href="projects.html" class="bottom-nav-item">Projects</a>
     <a href="gallery.html" class="bottom-nav-item">Gallery</a>
     <a href="resume.html" class="bottom-nav-item">Resume</a>
-    <button id="theme-toggle" class="bottom-nav-item" type="button">Dark/Light</button>
+    <button id="theme-toggle" class="bottom-nav-item bottom-nav-toggle" type="button">
+      Dark/Light
+    </button>
     <a href="#top" class="bottom-nav-item">Top</a>
   </nav>
 
